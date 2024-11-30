@@ -5,6 +5,7 @@ import CustomButton from './components/CustomButton'
 import store from './store/store';
 import { Provider } from 'react-redux';
 import ResetButton from './components/ResetButton';
+import PostList from './components/PostList';
 
 function App() {
 
@@ -27,9 +28,11 @@ function App() {
   return (
     <Provider store={store}>
 
-      <div className='flex justify-center items-center h-screen'>
+      <div className='flex flex-col gap-4 p-4 h-screen'>
 
-        <Card className="w-[400px] p-4">
+        <PostList />
+
+        {/* <Card className="w-[400px] p-4">
           <CardTitle>
             Counter Example
             45
@@ -42,7 +45,7 @@ function App() {
               <CustomButton text={"Decrement"} type={"decrement"} />
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
 
       </div>
     </Provider>
